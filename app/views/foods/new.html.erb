@@ -1,0 +1,55 @@
+<div class="food-contents">
+  <header class="food-header">
+    <%#= link_to image_tag('#' , size: '185x50'), "/" %>
+  </header>
+  <div class= "contents row">
+    <div class="container">
+      <h3>登録する</h3>
+      <%= form_with(model: @food, local: true) do |f| %>
+      <div class="food-name">
+        <div class ="weight-bold-text">
+          食品名
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :name, placeholder: "食品名" %>
+      </div>
+
+      <%#食品画像の登録%>
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          食品画像
+          <span class="indispensable">必須</span>
+        </div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.text_field :image, placeholder: "Image Url" %>
+        </div>
+      </div>
+      <%#//食品画像の登録%>
+
+      <%= f.text_field :amount, placeholder: "内容量" %>
+      <%#= f.radio_btn  :allergy %>
+
+      <div class="expration">
+            賞味期限
+      <span class="indispensable">必須</span>
+      </div>
+      <%#= f.collection_select :expriation_date %>
+    
+      <%#= f.collection_select :count %>
+
+      <%#登録ボタン%>
+      <div class="save-btn-contents">
+        <%= f.submit "登録する", class:"save-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+    <%#=//登録ボタン%>
+<% end %>
+</div>
+</div>
+<footer class="food-footer"></footer>
+</div>
+
+

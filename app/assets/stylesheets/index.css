@@ -1,0 +1,15 @@
+.wrapper{
+  display: flex;
+}
+
+.left{
+  background-color: antiquewhite;
+}
+
+.right{
+  background-color: bisque;
+}
+
+.right-contents{
+
+}
