@@ -1,0 +1,52 @@
+
+.h3{
+  font-size: 30px;
+}
+
+.food-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.food-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: rgb(210, 227, 250);
+}
+
+
+.food-img-content {
+  position: relative;
+}
+
+.item-image {
+  width: 33vh;
+  height: 33vh;
+  border-radius: 8px;
+}
+
+.food-title{
+  font-size: 30px;
+  color: darkslategrey;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.food-name{
+  font-size: 20px;
+  color: black
+}
+
+.foods-contents{
+  background-color:rgb(210, 227, 250);
+}
+
+.food-count{
+  color: black;
+}
+.food-day{
+  color: black;
+}

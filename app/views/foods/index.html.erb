@@ -1,25 +1,32 @@
-<div class="wrapper">
-  <div class ="left">
-    <div class= "title-content">
-        <div class = "title">Foody</div>
-    </div>
-    <div class ="image-content">
-    </div>
-  </div>
-  <div class="right">
-    <div class = "right-contents">
-      <div class ="stock">
-        <a href= "food_path">在庫をみる</a>
-      </div>
-      <div class ="registration">
-        <a href= "/foods/new">食品とうろく</a>
-      </div>
-      <div class ="search-menu">
-        <a href= "#">メニューを探す</a>
-      </div>
-      <div class ="search-food">
-        <a href= "#">食品けんさく</a>
-      </div>
-    </div>
-  </div>
+
+  <div class="foods-contents">
+    <h3 class='food-title'>在庫一覧</h3>
+  <ul class='food-lists'>
+  <%# if @food == nil %>
+    <% @foods.each do |food| %>
+      <li class="list">
+        
+        <%= link_to food_path(food.id)  do %>
+          <div class="food-img-content">
+            <%= image_tag food.image, class: "item-image" %>
+          <% if @date - food.expriation_date >= 3 %>
+            <div class="caution"><span>賞味期限間近です！</span></div>
+          <% end %>
+        </div>
+            
+          <div class="food-info">
+            <h3 class ="food-name">食品名：
+              <%= food.name %>
+            </h3>
+            <div class ="food-count">在庫数：
+              <span><%= food.count %>個</span>
+            </div>
+            <div class ="food-day">賞味期限：
+              <span><%= food.expriation_date.strftime("%Y/%m/%d") %></span>
+            </div>
+          </div>
+        <% end %>
+      </li>
+    <%end%>
 </div>
+</body>
