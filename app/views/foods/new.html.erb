@@ -4,52 +4,77 @@
   </header>
   <div class= "contents row">
     <div class="container">
-      <h3>登録する</h3>
-      <%= form_with(model: @food, local: true) do |f| %>
-      <div class="food-name">
-        <div class ="weight-bold-text">
-          食品名
-          <span class="indispensable">必須</span>
+      <h3>登録ページ</h3>
+      <%= form_with  model: @food, url: "/foods", local: true do |f| %>
+        <div class="food-name">
+          <div class ="weight-bold-text">
+              食品名
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_field :name, placeholder: "食品名" %>
         </div>
-        <%= f.text_field :name, placeholder: "食品名" %>
-      </div>
-
-      <%#食品画像の登録%>
-      <div class="img-upload">
+        <br>
+          <div class ="weight-bold-text">
+              個数
+            <span class="indispensable">必須</span>
+          </div>
+          <div class ="count-content">
+            <%= f.number_field :count, class: "count", min: 1, max: 500 %>
+          </div>
+          <br>
+          <%#食品画像の登録%>
+        <div class="img-upload">
+          <div class="weight-bold-text">
+            食品画像
+            <span class="indispensable">必須</span>
+          </div>
+          <div class="click-upload">
+            <p>
+              クリックしてファイルをアップロード
+            </p>
+            <%= f.file_field :image, id: "food-image" %>
+          </div>
+        </div>
+        <br>
+        <%#//食品画像の登録%>
         <div class="weight-bold-text">
-          食品画像
+              内容量（g）
           <span class="indispensable">必須</span>
         </div>
-        <div class="click-upload">
-          <p>
-            クリックしてファイルをアップロード
-          </p>
-          <%= f.text_field :image, placeholder: "Image Url" %>
+        <%= f.text_field :amount, placeholder: "内容量（g）" %>
+        <br>
+        <br>
+          <div class="expration">
+            <div class="weight-bold-text">
+                賞味期限
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.date_field :expriation_date, class: "date-select"  %>
+          </div>
+          <br>
+        <div class = "check-box">
+          <div class="weight-bold-text">
+          <span>アレルギー選択</span>
+          </div>
+          <%= f.collection_check_boxes :allergy_id, Allergy.all, :name, :name %>
         </div>
-      </div>
-      <%#//食品画像の登録%>
+        <br>
 
-      <%= f.text_field :amount, placeholder: "内容量" %>
-      <%#= f.radio_btn  :allergy %>
+        <div class="pull-btn">
+          <div class="weight-bold-text">
+            <span>カテゴリー選択</span>
+          </div>
+          <br>
+          <%= f.collection_select :category_id, Category.all, :id, :name %>
+        </div>
+        <br>
+        <div class="save-btn-contents">
+          <%= f.submit "登録する", class:"save-btn" %>
+          <%=link_to 'もどる', root_path, class:"back-btn" %>
+        </div>
 
-      <div class="expration">
-            賞味期限
-      <span class="indispensable">必須</span>
-      </div>
-      <%#= f.collection_select :expriation_date %>
-    
-      <%#= f.collection_select :count %>
-
-      <%#登録ボタン%>
-      <div class="save-btn-contents">
-        <%= f.submit "登録する", class:"save-btn" %>
-        <%=link_to 'もどる', root_path, class:"back-btn" %>
-      </div>
-    <%#=//登録ボタン%>
-<% end %>
+      <% end %>
+    </div>
+  </div>
+  <footer class="food-footer"></footer>
 </div>
-</div>
-<footer class="food-footer"></footer>
-</div>
-
-

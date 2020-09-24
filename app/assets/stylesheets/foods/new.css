@@ -1,0 +1,56 @@
+.food-contents {
+  background-color: #f5f5f5;
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.img-upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+
+.food-header {
+  padding: 5vh 0;
+  text-align: center;
+}
+
+
+.indispensable{
+  color: red;
+}
+
+.weight-bold-text{
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.save-btn{
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+  width: 40%;
+}
+
+.click-upload>p {
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+.pull-btn {
+  margin: 2vh 0;
+}
+
+.check-box{
+  margin-top: 5px;
+}
+
+
