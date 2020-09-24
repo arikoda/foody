@@ -1,0 +1,31 @@
+  
+<h3 class='food-title'>食品を探す</h3>
+<%= form_with(url: search_foods_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: '食品を検索する', class: 'search-input' %>
+  <%= form.submit '検索', class: "search-btn" %>
+<% end %>
+<div class="contents row">
+  <% @foods.each do |food| %>
+    <li class="list">
+      <%= link_to food_path(food.id)  do %>
+      <div class="food-img-content">
+        <%= image_tag food.image, class: "item-image" %>
+        <% if @date - food.expriation_date >= 3 %>
+          <div class="caution"><span>賞味期限間近です！</span></div>
+        <% end %>
+      </div>
+      <div class="food-info">
+        <h3 class ="food-name">食品名：
+          <%= food.name %>
+        </h3>
+        <div class ="food-count">在庫数：
+          <span><%= food.count %>個</span>
+        </div>
+        <div class ="food-day">賞味期限：
+          <span><%= food.expriation_date.strftime("%Y/%m/%d") %></span>
+        </div>
+      </div>
+      <% end %>
+    </li>
+  <% end %>
+</div>

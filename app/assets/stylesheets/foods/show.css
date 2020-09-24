@@ -1,0 +1,99 @@
+
+.food-show {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+.food-box {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 10vh 15vw;
+  display: flex;
+  align-items: center;
+}
+
+.food-box>.name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.food-box-img {
+  /*height: 40vh;*/
+  width: 30vw;
+  min-height: 250px;
+  object-fit: contain;
+  margin: 0 20px;
+}
+
+.food-count-box {
+  margin: 25px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.food-count-box>.food-count {
+  font-size: 4vh;
+  font-weight: bold;
+}
+
+.item-price-box>.item-postage {
+  font-size: 16px;
+}
+
+
+.food-blue-btn {
+  text-align: center;
+  background-color: skyblue;
+  font-size: 24px;
+  color: #FFF;
+  margin: 20px 20px;
+  padding: 2vh 10vw;
+}
+
+.food-destroy {
+  background-color: palevioletred;
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  margin: 20px 20px;
+  padding: 2vh 10vw;
+}
+
+.detail-table {
+  margin-bottom: 30px;
+  width: 60%;
+}
+
+.btn{
+  display: flex;
+  justify-content: space-between;
+}
+.detail-item {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}
+
+.caution{
+  color: red;
+  font-size: 18px;
+}
+
+.name{
+  font-size: 30px;
+}

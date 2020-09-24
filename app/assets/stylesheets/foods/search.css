@@ -1,0 +1,63 @@
+
+.food-img-content {
+  position: relative;
+}
+
+.item-image {
+  width: 20vh;
+  height: 20vh;
+
+}
+
+.food-title{
+  font-size: 30px;
+  color: darkslategrey;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.food-name{
+  font-size: 20px;
+  color: black
+}
+
+.list{
+  list-style: none;
+  float: left;
+  justify-content: space-between;
+}
+
+.food-info {
+  font-size: 20px;
+  margin: 20px;
+}
+
+.food-count{
+}
+
+.food-day{
+
+}
+
+.search-btn {
+  background-color: #57C3E9;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+  margin: 40px;
+  width: 10%;
+  border-radius: 5px;
+}
+
+.search-input {
+  display: flex;
+  width: 70%;
+  margin: 40px 25px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
+.search-form{
+  display: flex;
+}

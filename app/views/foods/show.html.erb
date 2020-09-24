@@ -1,0 +1,57 @@
+<%# 商品の概要 %>
+<div class="food-show">
+    <h2 class="name">
+      <%= @food.name %>
+    </h2>          
+    <% if @date - @food.expriation_date >= 3 %>
+      <div class="caution"><span>賞味期限間近です！</span></div>
+    <% end %>
+  <div class="food-box">
+    
+    <div class='food-img-content'>
+      <%= image_tag @food.image ,class:"food-box-img" %>
+    </div>
+        <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">食品名</th>
+          <td class="detail-value"><%= @food.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">カテゴリー</th>
+          <td class="detail-value"><%= @food.category.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">食品個数</th>
+          <td class="detail-value"><%= @food.count %>個</td>
+        </tr>
+        <tr>
+          <th class="detail-item">アレルギー</th>
+          <td class="detail-value"><%= @food.allergy_id %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">内容量</th>
+          <td class="detail-value"><%= @food.amount %>g</td>
+        </tr>
+        <tr>
+          <th class="detail-item">賞味期限</th>
+          <td class="detail-value"><%= @food.expriation_date.strftime("%Y年%m月%d日") %></td>
+
+        </tr>
+        <tr>
+          <th class="detail-item">寄付者</th>
+          <td class="detail-value"><%#= @food.doner.name %></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="btn">
+      <div class= "food-blue-btn">
+        <%= link_to '食品の編集', edit_food_path(@food.id), method: :get  %>
+      </div>
+      <div class='food-destroy' >
+        <%= link_to '食品の削除', food_path(@food.id), method: :delete %>
+      </div>
+    </div>
+
+  
