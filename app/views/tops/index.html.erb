@@ -1,0 +1,29 @@
+
+<div class="wrapper">
+    <div class="top-image">
+
+    </div>
+      <div class ="left">
+        <div class= "title-content">
+        <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
+          <div class = "title">Foody</div>
+        </div>
+    
+        <div class = "left-contents">
+          <div class ="stock">
+            <%=link_to '在庫一覧', foods_path, method: :get %>
+          </div>
+          <div class ="registration">
+            <a href= "/foods/new">登録する</a>
+          </div>
+          <div class ="search-menu">
+            <%=link_to '食品をさがす', search_foods_path, method: :get %>
+          </div>
+          <div class ="search-food">
+            <a href= "#">レシピを探す</a>
+          </div>
+        </div>  
+      </div>
+      <div class="right">
+      </div>  
+</div>
