@@ -82,3 +82,9 @@ a{
   border: 1px solid whitesmoke;
 }
 
+.today{
+  font-size: 16px;
+  color: white;
+  margin: 20px 0 0 50px;
+  
+}

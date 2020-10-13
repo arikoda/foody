@@ -1,14 +1,14 @@
 
 <div class="wrapper">
     <div class="top-image">
-
     </div>
       <div class ="left">
         <div class= "title-content">
         <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
           <div class = "title">Foody</div>
         </div>
-    
+    <div class="today">今日は<%= @today %>です
+    </div>
         <div class = "left-contents">
           <div class ="stock">
             <%=link_to '在庫一覧', foods_path, method: :get %>

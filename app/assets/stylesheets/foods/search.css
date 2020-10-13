@@ -32,12 +32,6 @@
   margin: 20px;
 }
 
-.food-count{
-}
-
-.food-day{
-
-}
 
 .search-btn {
   background-color: #57C3E9;
@@ -60,4 +54,8 @@
 }
 .search-form{
   display: flex;
+}
+
+.food-day{
+  font-size: smaller ;
 }

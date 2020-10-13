@@ -2,7 +2,7 @@
   <div class="foods-contents">
     <h3 class='food-title'>在庫一覧</h3>
   <ul class='food-lists'>
-  <%# if @food == nil %>
+  <div class="time"></div>
     <% @foods.each do |food| %>
       <li class="list">
         
@@ -10,7 +10,7 @@
           <div class="food-img-content">
             <%= image_tag food.image, class: "item-image" %>
           <% if @date - food.expriation_date >= 3 %>
-            <div class="caution"><span>賞味期限間近です！</span></div>
+            <div class="caution" id = "caution1"><span>賞味期限間近です！</span></div>
           <% end %>
         </div>
             
@@ -21,7 +21,7 @@
             <div class ="food-count">在庫数：
               <span><%= food.count %>個</span>
             </div>
-            <div class ="food-day">賞味期限：
+            <div class ="food-day" id = "day1">賞味期限：
               <span><%= food.expriation_date.strftime("%Y/%m/%d") %></span>
             </div>
           </div>
@@ -29,4 +29,5 @@
       </li>
     <%end%>
 </div>
+<%= render partial:"footer" %>
 </body>
